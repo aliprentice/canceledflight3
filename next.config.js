@@ -1,7 +1,8 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Simplified config without webpack customizations
-  // to ensure compatibility with Vercel deployment
-};
+  swcMinify: true,
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
+
