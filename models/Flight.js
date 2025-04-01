@@ -12,4 +12,7 @@ const FlightSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now }
 });
 
-export default mongoose.models.Flight || mongoose.model('Flight', FlightSchema);
+// Check if the model already exists to prevent overwriting
+const Flight = mongoose.models.Flight || mongoose.model('Flight', FlightSchema);
+
+export default Flight;
